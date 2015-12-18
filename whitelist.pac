@@ -50,9 +50,10 @@ function FindProxyForURL(url, host) {
 
     var i, len;
     // block privacy trackers
+    /*
     for (i = 0, len = blockedHosts.length; i < len; i++)
         if (shExpMatch3(host,blockedHosts[i])) return BLACKHOLE;
-
+    */
     // force proxy by domain. eg: http://cn.nytimes.com
     for (i = 0, len = overrideDomains.length; i < len; i++)
         if (shExpMatch3(host,overrideDomains[i])) return PROXY;
