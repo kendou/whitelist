@@ -8,7 +8,7 @@
 */
 function shExpMatch3(url, pattern){
   var reg = /\*/g;
-  var tmpStr = pattern.replace(reg,'([^\s]+)?');
+  var tmpStr = pattern.replace(reg,'([^\\s]+)?');
   reg = /\./g;
   tmpStr = tmpStr.replace(reg,'\\.');
   tmpPattern = new RegExp(tmpStr);
